@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ExercicioController;
+use App\Http\Controllers\Cliente;
 
 Route::get('/exercicio01', [ExercicioController::class, 'exercicio01']);
 
@@ -25,3 +26,6 @@ Route::get('/exercicio09', [ExercicioController::class, 'exercicio09']);
 Route::get('/exercicio10', [ExercicioController::class, 'exercicio10']);
 
 Route::get('/exercicio11', [ExercicioController::class, 'exercicio11']);
+
+Route::get('cadastrarCliente', [Cliente::class, 'create']);
+Route::post('cadastrarCliente', [Cliente::class, 'store']);
