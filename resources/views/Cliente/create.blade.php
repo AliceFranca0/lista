@@ -17,6 +17,6 @@
     <input type="submit" value="Cadastrar">
     </form>
 
-    <a href="read">Listar Cliente</a>
+    <a href="listarCliente">Listar Cliente</a>
 </body>
 </html>
