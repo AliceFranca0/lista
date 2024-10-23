@@ -31,3 +31,5 @@ Route::get('cadastrarCliente', [Cliente::class, 'create']);
 Route::post('cadastrarCliente', [Cliente::class, 'store']);
 Route::get('listarCliente', [Cliente::class, 'index']);
 Route::delete('/deletarCliente/{id}', [Cliente::class, 'destroy']);
+Route::get('editarCliente/{id}', [Cliente::class, 'edit']);
+Route::put('editarCliente/{id}', [Cliente::class, 'update']);
