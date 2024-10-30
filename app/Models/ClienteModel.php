@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Http\Controllers\Cliente;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -49,4 +50,16 @@ class ClienteModel extends Model
             return $status;
     }
 
+    public static function search(Request $request)
+    {
+        
+        $query = $request->input('query');
+    
+        $results = DB::table('clientes')
+                     ->where('nome', 'like', '%' . $query . '%')
+                     ->get();
+    
+        return response()->json($results);
+    }
+    
 }
