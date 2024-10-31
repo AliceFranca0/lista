@@ -11,7 +11,7 @@ Route::get('/', function () {
         return redirect()->route('dashboard');
     }
     return view('auth.login');
-})->name('login');
+});
 
 
 Route::get('/dashboard', function () {
