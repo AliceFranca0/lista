@@ -6,7 +6,7 @@ use App\Http\Controllers\ExercicioController;
 use App\Http\Controllers\Cliente;
 use Illuminate\Support\Facades\Auth;
 
-Route::get('/login', function () {
+Route::get('/', function () {
     if (Auth::check()) {
         return redirect()->route('dashboard');
     }
