@@ -88,6 +88,8 @@
             <x-primary-button class="ms-3">
                 {{ __('Log in') }}
             </x-primary-button>
+
+            <a href="{{route('google.redirect')}}">Login com o Google</a>
         </div>
     </form>
 </x-guest-layout>

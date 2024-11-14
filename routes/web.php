@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ExercicioController;
 use App\Http\Controllers\Cliente;
+
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\GoogleLoginController;
 
 Route::get('/', function () {
     if (Auth::check()) {
@@ -55,3 +57,10 @@ Route::get('listarCliente', [Cliente::class, 'index']);
 Route::delete('/deletarCliente/{id}', [Cliente::class, 'destroy']);
 Route::get('editarCliente/{id}', [Cliente::class, 'edit']);
 Route::put('editarCliente/{id}', [Cliente::class, 'update']);
+
+
+Route::get('/google/redirect', [GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
+
+Route::get('/auth/google/callback', [GoogleLoginController::class, 'handleGoogleCallback']);
+
+Route::post('/logout', [GoogleLoginController::class, 'logout'])->name('logout');
