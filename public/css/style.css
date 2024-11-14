@@ -1,13 +1,32 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-}
+
+    background: linear-gradient(to bottom, #00aaff, #0077be);
+    overflow: hidden;
+    }
+    
+    .wave {
+        position: absolute;
+        bottom: 0;
+        width: 200%;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 100%;
+        animation: wave 5s infinite linear;
+    }
+    
+    @keyframes wave {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    
+
 
 .container {
     width: 80%;
@@ -87,4 +106,20 @@ td button:hover {
 
 .result-item:hover {
     background-color: #f1f1f1;
+}
+
+:root {
+    --main-blue: #0077be;
+    --light-blue: #00aaff;
+    --sea-green: #00ffaa;
+}
+
+body, h1, h2, h3, p {
+    color: white;
+}
+a, .btn {
+    color: var(--main-blue);
+}
+a:hover, .btn:hover {
+    color: var(--sea-green);
 }

@@ -28,3 +28,16 @@ document.getElementById('search-input').addEventListener('keyup', function() {
         document.getElementById('results').innerHTML = '';
     }
 });
+
+const buttons = document.querySelectorAll('.btn');
+buttons.forEach(button => {
+    button.addEventListener('mouseover', () => {
+        button.style.backgroundColor = '#0077be';
+        button.style.color = 'white';
+    });
+    button.addEventListener('mouseout', () => {
+        button.style.backgroundColor = '';
+        button.style.color = '';
+    });
+});
+

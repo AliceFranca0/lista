@@ -49,5 +49,10 @@
     </div>
 
     <script src="{{ asset('js/search.js') }}"></script>
+
+    <div class="wave"></div>
+    <div class="wave" style="animation-delay: 2s; opacity: 0.5;"></div>
+    <div class="wave" style="animation-delay: 4s; opacity: 0.2;"></div>
+
 </body>
 </html>
